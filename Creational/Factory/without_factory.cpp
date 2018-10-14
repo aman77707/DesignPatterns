@@ -51,7 +51,10 @@ int main()
 {
     client *c = new client(4);
     shape *s = c->getShape();
-    s->printShape();
+    if(s)
+        s->printShape();
+    else
+        cout << "Shape type not supported" << endl;
     return 0;
 }    
 
